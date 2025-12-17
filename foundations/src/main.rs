@@ -1,23 +1,10 @@
 fn main() {
-    let twenty = 10;
-    let twenty_one: i32 = 21;
-    let twenty_two = 22i32;
-
-    let addition = twenty + twenty_one + twenty_two;
-    println!(
-        "{} + {} + {} = {}",
-        twenty, twenty_one, twenty_two, addition
-    );
-
-    let one_million: i64 = 1_000_001;
-    println!("{}", one_million.pow(2));
-
-    let total = addition + one_million.pow(2) as i32;
-    // i64からi32に縮めたことによって、下位32bitだけが残される。
-    // この場合は、32bit目が1で入れ替わってしまうため、-として答えが出る。
-    println!("{}", total);
-
-    let forty_twos = [42.0, 42f32, 42.0_f32];
-
-    println!("{}", forty_twos[0]);
+    assert_eq!(2_i32.pow(4), 16);
+    assert_eq!((-4_i32).abs(), 4);
+    assert_eq!(0b101101_u8.count_ones(), 4);
+    
+    assert_eq!(2_i32.checked_pow(4), Some(16));
+    assert_eq!(100_u8.checked_add(200), None);
+    assert_eq!((-4_i32).checked_abs(), Some(4));
+    assert_eq!((-128_i8).checked_div(-1), None);
 }
