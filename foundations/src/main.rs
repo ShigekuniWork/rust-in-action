@@ -12,4 +12,10 @@ fn main() {
     // bool
     assert_eq!(false as i32, 0);
     assert_eq!(true as i32, 1);
+    
+    // char
+    assert_eq!('*'.is_alphabetic(), false);
+    assert_eq!('β'.is_alphabetic(), true);
+    assert_eq!('8'.to_digit(10), Some(8));
+    assert_eq!('ಠ'.len_utf8(), 3);
 }
