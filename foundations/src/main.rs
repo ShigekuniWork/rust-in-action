@@ -18,4 +18,13 @@ fn main() {
     assert_eq!('β'.is_alphabetic(), true);
     assert_eq!('8'.to_digit(10), Some(8));
     assert_eq!('ಠ'.len_utf8(), 3);
+    
+    // tuple
+    let self_introduction = "My name is koki shigekuni";
+    let temp = self_introduction.split_at(21);
+    let head = temp.0;
+    let tail = temp.1;
+    
+    assert_eq!(head, "My name is koki shige");
+    assert_eq!(tail, "kuni");
 }
