@@ -62,4 +62,18 @@ fn main() {
     assert_eq!(cap.capacity(), 2);
 
     assert_eq!(cap.pop(), Some(2));
+    
+    
+    // slice
+    let ve: Vec<f64> = vec![0.0, 0.707, 1.0, 0.707];
+    let a: [f64; 4] = [0.0, 0.707, 1.0, 0.707];
+    
+    slice_print(&ve[1..3]);
+    slice_print(&a);
+}
+
+fn slice_print(n: &[f64]) {
+    for elt in n {
+        println!("{}", elt);
+    }
 }
