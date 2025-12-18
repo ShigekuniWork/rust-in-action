@@ -27,4 +27,11 @@ fn main() {
     
     assert_eq!(head, "My name is koki shige");
     assert_eq!(tail, "kuni");
+    
+    // array
+    let lazy_caterer: [u32; 6] = [1,2,4,7,11,16];
+    let taxonomy = ["Animalia", "Arthropoda", "Insecta"];
+    
+    assert_eq!(lazy_caterer[3], 7);
+    assert_eq!(taxonomy.len(), 3);
 }
